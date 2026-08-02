@@ -33,32 +33,32 @@ Right now I'm going deeper on backend architecture and on the motion details tha
 <tr>
 <td width="33%" valign="top">
 
-### Project One
-Solves a specific problem for a specific person — say who and what in one line.
+### Natija
+Mauritania's national exam results, searchable in the browser — 121k rows, no database, admin uploads the official Excel file.
 
-`Flutter` `Firebase`
+`Next.js` `TypeScript` `Vercel Blob`
 
-[Code](https://github.com/Git-moud1) · [Demo](#)
-
-</td>
-<td width="33%" valign="top">
-
-### Project Two
-Solves a specific problem for a specific person — say who and what in one line.
-
-`Node.js` `MySQL`
-
-[Code](https://github.com/Git-moud1) · [Demo](#)
+[Code](https://github.com/Git-moud1/natija) · [Demo](https://natija-ten.vercel.app)
 
 </td>
 <td width="33%" valign="top">
 
-### Project Three
-Solves a specific problem for a specific person — say who and what in one line.
+### Mauri-Dev
+Trilingual portfolio and marketing site (AR / EN / FR) that turns visitors into clients, with an admin panel for the content.
 
-`Dart` `REST API`
+`Next.js 16` `React 19` `Tailwind`
 
-[Code](https://github.com/Git-moud1) · [Demo](#)
+[Code](https://github.com/Git-moud1/mauri-dev-medma7moud) · [Demo](https://medmoudsite.netlify.app)
+
+</td>
+<td width="33%" valign="top">
+
+### Skin Beauty
+Korean skincare storefront for a local seller — bilingual AR/FR, prices in MRU, orders land in a dashboard with one-click WhatsApp.
+
+`Next.js` `JavaScript` `Tailwind`
+
+[Code](https://github.com/Git-moud1/skin-beauty) · [Demo](https://skin-beauty-nine.vercel.app)
 
 </td>
 </tr>
