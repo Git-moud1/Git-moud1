@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 104 110" width="104" height="110" role="img" aria-label="FastAPI">
+<title>FastAPI</title>
+<rect x="0.5" y="0.5" width="103" height="109" rx="16" fill="#0B1630" stroke="#1E3A5F"/>
+<svg x="24.0" y="14" width="56" height="56" viewBox="0 0 256 256"><g transform="translate(0, 0)">
+          <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="256" height="256" rx="60" fill="#049789"/>
+<path d="M127.5 41C79.743 41 41 79.743 41 127.5C41 175.257 79.743 214 127.5 214C175.257 214 214 175.257 214 127.5C214 79.743 175.257 41 127.5 41ZM122.993 196.839V142.581H92.8306L136.167 58.1615V112.419H165.203L122.993 196.839Z" fill="white"/>
+</svg>
+
+        </g>
+        
+  </svg>
+<text x="52.0" y="94" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#E6EDF5">FastAPI</text>
+</svg>

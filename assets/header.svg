@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Med Ma7moud — Software Engineer">
+<title>Med Ma7moud — Software Engineer</title>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#050A16"/>
+    <stop offset="1" stop-color="#0B1630"/>
+  </linearGradient>
+  <radialGradient id="orbA" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#1D4ED8" stop-opacity="0.55"/>
+    <stop offset="1" stop-color="#1D4ED8" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="orbB" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#0EA5E9" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="fade" cx="0.5" cy="0.5" r="0.6">
+    <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </radialGradient>
+  <mask id="gridMask"><rect width="1200" height="360" fill="url(#fade)"/></mask>
+  <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1.2" fill="#3B5B86"/>
+  </pattern>
+  <linearGradient id="name" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox" spreadMethod="reflect">
+    <stop offset="0" stop-color="#E0F2FE"/>
+    <stop offset="0.35" stop-color="#7DD3FC"/>
+    <stop offset="0.65" stop-color="#38BDF8"/>
+    <stop offset="1" stop-color="#818CF8"/>
+    <animateTransform attributeName="gradientTransform" type="translate"
+      values="0 0; 1 0; 0 0" dur="9s" begin="1.4s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="border" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#38BDF8" stop-opacity="0.05"/>
+    <stop offset="0.5" stop-color="#38BDF8" stop-opacity="0.7"/>
+    <stop offset="1" stop-color="#818CF8" stop-opacity="0.05"/>
+  </linearGradient>
+  <linearGradient id="ruleL" x1="1" y1="0" x2="0" y2="0">
+    <stop offset="0" stop-color="#38BDF8"/>
+    <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="ruleR" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#818CF8"/>
+    <stop offset="1" stop-color="#818CF8" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0.85"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+    <feGaussianBlur stdDeviation="22"/>
+  </filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="40"/>
+  </filter>
+  <clipPath id="frame"><rect width="1200" height="360" rx="24"/></clipPath>
+  <clipPath id="nameClip">
+    <text x="600" y="206" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="132" font-weight="800" letter-spacing="-3">Med Ma7moud</text>
+  </clipPath>
+</defs>
+<style>
+  .in   { animation: in 1.1s cubic-bezier(.16,1,.3,1) both; }
+  .sub  { animation: fade .9s ease-out 1s both; }
+  .rule { transform-box: fill-box; animation: grow .9s cubic-bezier(.16,1,.3,1) 1.1s both; }
+  .ruleL { transform-origin: right center; }
+  .ruleR { transform-origin: left center; }
+  .halo { animation: fade 1.6s ease-out .4s both, breathe 5s ease-in-out 2s infinite; }
+  .sweep { animation: sweep 6s ease-in-out 1.6s infinite; transform: translateX(-420px); }
+  @keyframes in     { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  @keyframes fade   { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes grow   { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes breathe { 0%,100% { opacity: .6; } 50% { opacity: 1; } }
+  @keyframes sweep  { 0% { transform: translateX(-420px); } 35%,100% { transform: translateX(1300px); } }
+  @media (prefers-reduced-motion: reduce) {
+    .in, .sub, .halo { animation: none; opacity: 1; transform: none; }
+    .rule { animation: none; transform: none; }
+    .sweep { animation: none; opacity: 0; }
+  }
+</style>
+
+<g clip-path="url(#frame)">
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <rect width="1200" height="360" fill="url(#dots)" mask="url(#gridMask)" opacity="0.45"/>
+  <ellipse cx="250" cy="40" rx="380" ry="230" fill="url(#orbA)" filter="url(#soft)"/>
+  <ellipse cx="980" cy="330" rx="400" ry="220" fill="url(#orbB)" filter="url(#soft)"/>
+
+  <!-- name: glow layer, gradient fill, then a light sweep clipped to the glyphs -->
+  <text class="halo" x="600" y="206" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="132" font-weight="800" letter-spacing="-3" fill="#38BDF8" opacity="0.6" filter="url(#glow)">Med Ma7moud</text>
+  <g class="in">
+    <text x="600" y="206" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="132" font-weight="800" letter-spacing="-3" fill="url(#name)">Med Ma7moud</text>
+    <g clip-path="url(#nameClip)" opacity="0.35">
+      <rect class="sweep" x="0" y="60" width="160" height="180" fill="url(#sheen)"/>
+    </g>
+  </g>
+
+  <!-- subtitle -->
+  <rect class="rule ruleL" x="150" y="273" width="200" height="1.5" fill="url(#ruleL)"/>
+  <rect class="rule ruleR" x="850" y="273" width="200" height="1.5" fill="url(#ruleR)"/>
+  <text class="sub" x="600" y="283" text-anchor="middle" font-family="'Segoe UI', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" font-weight="600" letter-spacing="9" fill="#BAE6FD">SOFTWARE ENGINEER</text>
+</g>
+<rect x="0.75" y="0.75" width="1198.5" height="358.5" rx="23.5" fill="none" stroke="url(#border)" stroke-width="1.5"/>
+</svg>

@@ -1,64 +1,70 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/header-light.svg">
-  <img src="./assets/header-dark.svg" alt="Moud — Flutter & Full Stack Developer" width="100%">
-</picture>
+<img src="./assets/header.svg" alt="Med Ma7moud — Software Engineer" width="100%">
 
 <br/><br/>
 
-<a href="mailto:baymed000@gmail.com"><img src="https://img.shields.io/badge/Email-0B1220?style=flat-square&logo=gmail&logoColor=13B9FD&labelColor=0B1220" alt="Email"></a>
-<a href="https://linkedin.com/in/baymed"><img src="https://img.shields.io/badge/LinkedIn-0B1220?style=flat-square&logo=linkedin&logoColor=13B9FD&labelColor=0B1220" alt="LinkedIn"></a>
-<a href="https://github.com/Git-moud1?tab=repositories"><img src="https://img.shields.io/badge/Projects-0B1220?style=flat-square&logo=github&logoColor=13B9FD&labelColor=0B1220" alt="Projects"></a>
-<img src="https://komarev.com/ghpvc/?username=Git-moud1&label=Views&color=0B1220&style=flat-square" alt="Profile views">
+<a href="mailto:baymed000@gmail.com"><img src="./assets/contact/email.svg" alt="Email" width="184"></a>&nbsp;&nbsp;<a href="https://linkedin.com/in/baymed"><img src="./assets/contact/linkedin.svg" alt="LinkedIn" width="184"></a>&nbsp;&nbsp;<a href="https://github.com/Git-moud1"><img src="./assets/contact/github.svg" alt="GitHub" width="184"></a>
 
 </div>
 
 <br/>
 
-## What I do
-
-I build cross-platform apps in **Flutter** and the backends that keep them running. Most of my work starts at the data model and ends at the last pixel — I'd rather own a feature end to end than hand it across three teams.
-
-Right now I'm going deeper on backend architecture and on the motion details that make a mobile UI feel finished rather than functional.
-
-**Open to** freelance work, collaboration on mobile or full stack projects, and interesting problems that don't have an obvious answer yet.
+<p align="center">
+Software engineer based in Mauritania, building full-stack products that people use on their phones — in Arabic, French and English. I take a feature from the database schema to the last pixel: Next.js and TypeScript in front, PostgreSQL with row-level security behind it. Recent work includes a national exam-results site that searches 121k records without a database, and a maths learning platform with signed video delivery.
+</p>
 
 <br/>
 
-## Selected work
+<h2 align="center">Selected work</h2>
 
 <table>
 <tr>
-<td width="33%" valign="top">
+<td>
+
+<img src="./assets/featured-km.svg" alt="Featured project: KM — mathematics e-learning platform" width="100%">
+
+**Mobile-first learning platform for Mauritania's secondary-school maths programme** — lesson videos with signed playback, a quiz after every lesson, chat with the teacher, and a full admin studio for content, students and payments.
+
+`Next.js 16` `React 19` `TypeScript` `Supabase` `PostgreSQL` `Cloudflare Workers` `Bunny Stream`
+
+<sub>Private repository · built with a team of three · pre-launch</sub>
+
+</td>
+</tr>
+<tr>
+<td>
 
 ### Natija
 Mauritania's national exam results, searchable in the browser — 121k rows, no database, admin uploads the official Excel file.
 
 `Next.js` `TypeScript` `Vercel Blob`
 
-[Code](https://github.com/Git-moud1/natija) · [Demo](https://natija-ten.vercel.app)
+[**Code**](https://github.com/Git-moud1/natija) · [**Live demo**](https://natija-ten.vercel.app)
 
 </td>
-<td width="33%" valign="top">
+</tr>
+<tr>
+<td>
 
 ### Mauri-Dev
 Trilingual portfolio and marketing site (AR / EN / FR) that turns visitors into clients, with an admin panel for the content.
 
 `Next.js 16` `React 19` `Tailwind`
 
-[Code](https://github.com/Git-moud1/mauri-dev-medma7moud) · [Demo](https://medmoudsite.netlify.app)
+[**Live site**](https://mauri-dev.online)
 
 </td>
-<td width="33%" valign="top">
+</tr>
+<tr>
+<td>
 
 ### Skin Beauty
 Korean skincare storefront for a local seller — bilingual AR/FR, prices in MRU, orders land in a dashboard with one-click WhatsApp.
 
 `Next.js` `JavaScript` `Tailwind`
 
-[Code](https://github.com/Git-moud1/skin-beauty) · [Demo](https://skin-beauty-nine.vercel.app)
+[**Code**](https://github.com/Git-moud1/skin-beauty) · [**Live demo**](https://skin-beauty-nine.vercel.app)
 
 </td>
 </tr>
@@ -66,62 +72,53 @@ Korean skincare storefront for a local seller — bilingual AR/FR, prices in MRU
 
 <br/>
 
-## Toolkit
+<h2 align="center">Toolkit</h2>
 
-**Daily**
-![Flutter](https://img.shields.io/badge/Flutter-0B1220?style=flat-square&logo=flutter&logoColor=13B9FD&labelColor=0B1220)
-![Dart](https://img.shields.io/badge/Dart-0B1220?style=flat-square&logo=dart&logoColor=13B9FD&labelColor=0B1220)
-![Firebase](https://img.shields.io/badge/Firebase-0B1220?style=flat-square&logo=firebase&logoColor=FFCA28&labelColor=0B1220)
-![Node.js](https://img.shields.io/badge/Node.js-0B1220?style=flat-square&logo=node.js&logoColor=8CC84B&labelColor=0B1220)
-![Git](https://img.shields.io/badge/Git-0B1220?style=flat-square&logo=git&logoColor=F05032&labelColor=0B1220)
+<p align="center"><b>Languages</b><br/><br/>
+<img src="./assets/tools/typescript.svg" alt="TypeScript" width="104">
+<img src="./assets/tools/javascript.svg" alt="JavaScript" width="104">
+<img src="./assets/tools/python.svg" alt="Python" width="104">
+</p>
 
-<details>
-<summary><b>Everything else I work with</b></summary>
+<p align="center"><b>Web and mobile</b><br/><br/>
+<img src="./assets/tools/react.svg" alt="React" width="104">
+<img src="./assets/tools/nextjs.svg" alt="Next.js" width="104">
+</p>
+
+<p align="center"><b>Backend</b><br/><br/>
+<img src="./assets/tools/nodejs.svg" alt="Node.js" width="104">
+<img src="./assets/tools/fastapi.svg" alt="FastAPI" width="104">
+<img src="./assets/tools/supabase.svg" alt="Supabase" width="104">
+</p>
+
+<p align="center"><b>Databases</b><br/><br/>
+<img src="./assets/tools/postgresql.svg" alt="PostgreSQL" width="104">
+<img src="./assets/tools/supabase.svg" alt="Supabase" width="104">
+<img src="./assets/tools/firebase.svg" alt="Firebase" width="104">
+<img src="./assets/tools/mysql.svg" alt="MySQL" width="104">
+<img src="./assets/tools/mongodb.svg" alt="MongoDB" width="104">
+</p>
+
+<p align="center"><b>Machine Learning</b><br/><br/>
+<img src="./assets/tools/pytorch.svg" alt="PyTorch" width="104">
+<img src="./assets/tools/scikit-learn.svg" alt="scikit-learn" width="104">
+</p>
+
+<p align="center"><b>Tools</b><br/><br/>
+<img src="./assets/tools/git.svg" alt="Git" width="104">
+</p>
 
 <br/>
 
-| Layer | Tools |
-|---|---|
-| **Mobile** | Flutter · Dart · Material · Provider / Riverpod |
-| **Frontend** | JavaScript · HTML5 · CSS3 |
-| **Backend** | Node.js · PHP · Python · REST APIs |
-| **Data** | Firebase · MySQL |
-| **Workflow** | Git · GitHub Actions · VS Code · Android Studio |
+<h2 align="center">Get in touch</h2>
 
-</details>
+<p align="center">
+The fastest way to reach me is <a href="mailto:baymed000@gmail.com"><b>baymed000@gmail.com</b></a>.<br/>
+Open to freelance work and collaboration on web products.
+</p>
 
 <br/>
-
-## By the numbers
 
 <div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Git-moud1&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0B1220&title_color=13B9FD&icon_color=FFCA28&text_color=E6EDF5&border_radius=12">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Git-moud1&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=FFFFFF&title_color=0175C2&icon_color=C98A00&text_color=0B1220&border_radius=12" alt="GitHub stats">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Git-moud1&layout=compact&hide_border=true&langs_count=6&bg_color=0B1220&title_color=13B9FD&text_color=E6EDF5&border_radius=12">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Git-moud1&layout=compact&hide_border=true&langs_count=6&bg_color=FFFFFF&title_color=0175C2&text_color=0B1220&border_radius=12" alt="Top languages">
-</picture>
-
-<br/><br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Git-moud1/Git-moud1/output/snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Git-moud1/Git-moud1/output/snake-light.svg">
-  <img src="https://raw.githubusercontent.com/Git-moud1/Git-moud1/output/snake-dark.svg" alt="Contribution graph animation" width="100%">
-</picture>
-
-</div>
-
-<br/>
-
-## Get in touch
-
-The fastest way to reach me is **[baymed000@gmail.com](mailto:baymed000@gmail.com)**. I read everything, and I answer anything that isn't a template.
-
-<div align="center">
-<br/>
-<sub><code>@Git-moud1</code> · built with Flutter, coffee, and too many hot reloads</sub>
+<img src="https://komarev.com/ghpvc/?username=Git-moud1&label=Profile%20views&color=0B1220&style=flat-square" alt="Profile views">
 </div>
