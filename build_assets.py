@@ -221,6 +221,8 @@ TOOLS = [
     ("pytorch", "pytorch", "PyTorch"),
     ("scikit-learn", "sklearn", "scikit-learn"),
     ("git", "git", "Git"),
+    ("github", "github", "GitHub"),
+    ("docker", "docker", "Docker"),
 ]
 
 TILE_W, TILE_H, ICON = 104, 110, 56

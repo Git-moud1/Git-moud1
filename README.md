@@ -22,13 +22,13 @@ Software engineer based in Mauritania, building full-stack products that people 
 <tr>
 <td>
 
-<img src="./assets/featured-km.svg" alt="Featured project: KM — mathematics e-learning platform" width="100%">
+<a href="https://k-m.study"><img src="./assets/featured-km.svg" alt="Featured project: KM — mathematics e-learning platform" width="100%"></a>
 
 **Mobile-first learning platform for Mauritania's secondary-school maths programme** — lesson videos with signed playback, a quiz after every lesson, chat with the teacher, and a full admin studio for content, students and payments.
 
 `Next.js 16` `React 19` `TypeScript` `Supabase` `PostgreSQL` `Cloudflare Workers` `Bunny Stream`
 
-<sub>Private repository · built with a team of three · pre-launch</sub>
+[**Live site**](https://k-m.study) · <sub>private repository, built with a team of three</sub>
 
 </td>
 </tr>
@@ -106,6 +106,8 @@ Korean skincare storefront for a local seller — bilingual AR/FR, prices in MRU
 
 <p align="center"><b>Tools</b><br/><br/>
 <img src="./assets/tools/git.svg" alt="Git" width="104">
+<img src="./assets/tools/github.svg" alt="GitHub" width="104">
+<img src="./assets/tools/docker.svg" alt="Docker" width="104">
 </p>
 
 <br/>
