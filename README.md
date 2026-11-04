@@ -22,7 +22,7 @@ Software engineer based in Mauritania, building full-stack products that people 
 <tr>
 <td>
 
-<a href="https://k-m.study"><img src="./assets/featured-km.svg" alt="Featured project: KM — mathematics e-learning platform" width="100%"></a>
+<a href="https://k-m.study"><img src="./assets/projects/km.svg" alt="KM — mathematics e-learning platform" width="100%"></a>
 
 **Mobile-first learning platform for Mauritania's secondary-school maths programme** — lesson videos with signed playback, a quiz after every lesson, chat with the teacher, and a full admin studio for content, students and payments.
 
@@ -35,20 +35,9 @@ Software engineer based in Mauritania, building full-stack products that people 
 <tr>
 <td>
 
-### Natija
-Mauritania's national exam results, searchable in the browser — 121k rows, no database, admin uploads the official Excel file.
+<a href="https://mauri-dev.online"><img src="./assets/projects/mauri-dev.svg" alt="Mauri-Dev — trilingual team portfolio" width="100%"></a>
 
-`Next.js` `TypeScript` `Vercel Blob`
-
-[**Code**](https://github.com/Git-moud1/natija) · [**Live demo**](https://natija-ten.vercel.app)
-
-</td>
-</tr>
-<tr>
-<td>
-
-### Mauri-Dev
-Trilingual portfolio and marketing site (AR / EN / FR) that turns visitors into clients, with an admin panel for the content.
+**Trilingual portfolio and marketing site (AR / EN / FR)** that turns visitors into clients, with an admin panel for the content.
 
 `Next.js 16` `React 19` `Tailwind`
 
@@ -59,8 +48,22 @@ Trilingual portfolio and marketing site (AR / EN / FR) that turns visitors into 
 <tr>
 <td>
 
-### Skin Beauty
-Korean skincare storefront for a local seller — bilingual AR/FR, prices in MRU, orders land in a dashboard with one-click WhatsApp.
+<a href="https://natija-ten.vercel.app"><img src="./assets/projects/natija.svg" alt="Natija — national exam results" width="100%"></a>
+
+**Mauritania's national exam results, searchable in the browser** — 121k rows, no database, admin uploads the official Excel file.
+
+`Next.js` `TypeScript` `Vercel Blob`
+
+[**Code**](https://github.com/Git-moud1/natija) · [**Live demo**](https://natija-ten.vercel.app)
+
+</td>
+</tr>
+<tr>
+<td>
+
+<a href="https://skin-beauty-nine.vercel.app"><img src="./assets/projects/skin-beauty.svg" alt="Skin Beauty — Korean skincare store" width="100%"></a>
+
+**Korean skincare storefront for a local seller** — bilingual AR/FR, prices in MRU, orders land in a dashboard with one-click WhatsApp.
 
 `Next.js` `JavaScript` `Tailwind`
 

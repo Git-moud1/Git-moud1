@@ -4,7 +4,7 @@
 
 Writes:
   assets/header.svg           animated banner
-  assets/featured-km.svg      header card for the featured project
+  assets/projects/<id>.svg    project cards, each in its own site's colours
   assets/contact/<id>.svg     contact buttons (logo + label)
   assets/tools/<id>.svg       one toolkit tile per tool (logo + name)
 
@@ -147,30 +147,83 @@ def header() -> str:
 
 
 # --------------------------------------------------------------------------
-# Featured project card
+# Project cards — one template, each card themed with its own site's palette
 # --------------------------------------------------------------------------
 
-def featured_km() -> str:
+MATH = "'Cambria Math', 'STIX Two Math', 'Times New Roman', serif"
+
+PROJECTS = [
+    dict(  # palette: KM's own navy / sky / indigo
+        file="km", pill="FEATURED", title="K.M", title_size=92,
+        subtitle="Mathematics e-learning platform",
+        bg=(NAVY_0, NAVY_2), edge=(CYAN, INDIGO), title_grad=(ICE, SKY, INDIGO),
+        orb="#1D4ED8", accent=CYAN, pill_text=SKY, text=TEXT,
+        decor_font=MATH, decor_italic=True, decor_color=SKY,
+        decor=[(500, 84, 30, "f(x) = ax² + bx + c"), (610, 136, 28, "∫₀¹ x dx = ½"),
+               (600, 186, 26, "Δ = b² − 4ac")],
+    ),
+    dict(  # palette: mauri-dev.online dark theme (src/app/globals.css)
+        file="mauri-dev", pill="PORTFOLIO", title="Mauri-Dev", title_size=84,
+        subtitle="Trilingual team portfolio",
+        bg=("#0B0C10", "#1C1F27"), edge=("#A78BFA", "#60A5FA"),
+        title_grad=("#EDEFF6", "#A78BFA", "#60A5FA"),
+        orb="#8B5CF6", accent="#A78BFA", pill_text="#C4B5FD", text="#EDEFF6",
+        decor_font=MONO, decor_italic=False, decor_color="#A78BFA",
+        decor=[(560, 84, 30, "&lt;/&gt;"), (580, 136, 26, "AR · EN · FR"),
+               (528, 186, 22, "next@16 · react@19")],
+    ),
+    dict(  # palette: natija national green + gold (src/app/globals.css)
+        file="natija", pill="EXAM RESULTS", title="Natija", title_size=92,
+        subtitle="National exam results",
+        bg=("#04180E", "#0A2417"), edge=("#12945A", "#FFD343"),
+        title_grad=("#F2F7F0", "#7FD0A6", "#FFD343"),
+        orb="#12945A", accent="#FFD343", pill_text="#FFE08A", text="#F2F7F0",
+        decor_font=SANS, decor_italic=False, decor_color="#FFD343",
+        decor=[(560, 92, 44, "نتيجة"), (560, 140, 26, "BAC · BEPC · 1AS"),
+               (590, 188, 26, "121 000 rows")],
+    ),
+    dict(  # palette: skin-beauty navy + rose (tailwind.config.js)
+        file="skin-beauty", pill="E-COMMERCE", title="Skin Beauty", title_size=80,
+        subtitle="Korean skincare store",
+        bg=("#161D3F", "#1F295A"), edge=("#FF6FA1", "#8A9CDD"),
+        title_grad=("#FFF7FB", "#FFA6C4", "#F43F85"),
+        orb="#E11D6D", orb_opacity=0.3, accent="#FF6FA1", pill_text="#FFCCDD", text="#FFF7FB",
+        decor_font=SANS, decor_italic=False, decor_color="#FFA6C4",
+        decor=[(600, 92, 40, "뷰티"), (600, 140, 26, "AR · FR"),
+               (590, 188, 26, "prices in MRU")],
+    ),
+]
+
+
+def project_card(c: dict) -> str:
     w, h = 800, 240
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="Featured project: KM — maths e-learning platform">
-<title>Featured project: KM</title>
+    pill_w = max(196, round(64 + 13.2 * len(c["pill"])))
+    style = ' font-style="italic"' if c["decor_italic"] else ""
+    decor = "\n    ".join(
+        f'<text x="{x}" y="{y}" font-size="{size}">{text}</text>'
+        for x, y, size, text in c["decor"]
+    )
+    t0, t1, t2 = c["title_grad"]
+    label = f'{c["title"]} — {c["subtitle"]}'
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-label="{label}">
+<title>{label}</title>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="{NAVY_0}"/>
-    <stop offset="1" stop-color="{NAVY_2}"/>
+    <stop offset="0" stop-color="{c["bg"][0]}"/>
+    <stop offset="1" stop-color="{c["bg"][1]}"/>
   </linearGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="{CYAN}"/>
-    <stop offset="1" stop-color="{INDIGO}"/>
+    <stop offset="0" stop-color="{c["edge"][0]}"/>
+    <stop offset="1" stop-color="{c["edge"][1]}"/>
   </linearGradient>
   <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="{ICE}"/>
-    <stop offset="0.5" stop-color="{SKY}"/>
-    <stop offset="1" stop-color="{INDIGO}"/>
+    <stop offset="0" stop-color="{t0}"/>
+    <stop offset="0.5" stop-color="{t1}"/>
+    <stop offset="1" stop-color="{t2}"/>
   </linearGradient>
   <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#1D4ED8" stop-opacity="0.5"/>
-    <stop offset="1" stop-color="#1D4ED8" stop-opacity="0"/>
+    <stop offset="0" stop-color="{c["orb"]}" stop-opacity="{c.get("orb_opacity", 0.5)}"/>
+    <stop offset="1" stop-color="{c["orb"]}" stop-opacity="0"/>
   </radialGradient>
   <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
   <clipPath id="frame"><rect width="{w}" height="{h}" rx="20"/></clipPath>
@@ -179,21 +232,19 @@ def featured_km() -> str:
   <rect width="{w}" height="{h}" fill="url(#bg)"/>
   <ellipse cx="680" cy="60" rx="260" ry="160" fill="url(#orb)" filter="url(#soft)"/>
 
-  <!-- decorative formula, right side -->
-  <g font-family="'Cambria Math', 'STIX Two Math', 'Times New Roman', serif" font-style="italic" fill="{SKY}" opacity="0.18">
-    <text x="500" y="84" font-size="30">f(x) = ax² + bx + c</text>
-    <text x="610" y="136" font-size="28">∫₀¹ x dx = ½</text>
-    <text x="600" y="186" font-size="26">Δ = b² − 4ac</text>
+  <!-- decoration, right side -->
+  <g font-family="{c["decor_font"]}"{style} fill="{c["decor_color"]}" opacity="0.18">
+    {decor}
   </g>
 
-  <rect x="40" y="34" width="196" height="38" rx="19" fill="{CYAN}" fill-opacity="0.12" stroke="{CYAN}" stroke-opacity="0.5"/>
-  <circle cx="62" cy="53" r="5.5" fill="{CYAN}">
+  <rect x="40" y="34" width="{pill_w}" height="38" rx="19" fill="{c["accent"]}" fill-opacity="0.12" stroke="{c["accent"]}" stroke-opacity="0.5"/>
+  <circle cx="62" cy="53" r="5.5" fill="{c["accent"]}">
     <animate attributeName="opacity" values="1;.3;1" dur="2.4s" repeatCount="indefinite"/>
   </circle>
-  <text x="78" y="59.5" font-family="{MONO}" font-size="18" font-weight="600" letter-spacing="2" fill="{SKY}">FEATURED</text>
+  <text x="78" y="59.5" font-family="{MONO}" font-size="18" font-weight="600" letter-spacing="2" fill="{c["pill_text"]}">{c["pill"]}</text>
 
-  <text x="38" y="152" font-family="{SANS}" font-size="92" font-weight="800" letter-spacing="-2" fill="url(#title)">K.M</text>
-  <text x="40" y="200" font-family="{SANS}" font-size="32" font-weight="500" fill="{TEXT}">Mathematics e-learning platform</text>
+  <text x="38" y="152" font-family="{SANS}" font-size="{c["title_size"]}" font-weight="800" letter-spacing="-2" fill="url(#title)">{c["title"]}</text>
+  <text x="40" y="200" font-family="{SANS}" font-size="32" font-weight="500" fill="{c["text"]}">{c["subtitle"]}</text>
 </g>
 <rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="19" fill="none" stroke="url(#edge)" stroke-width="2" stroke-opacity="0.8"/>
 </svg>
@@ -280,7 +331,10 @@ def contact_button(label: str, icon_inner: str) -> str:
 def main() -> None:
     ASSETS.mkdir(exist_ok=True)
     (ASSETS / "header.svg").write_text(header(), encoding="utf-8")
-    (ASSETS / "featured-km.svg").write_text(featured_km(), encoding="utf-8")
+    projects_dir = ASSETS / "projects"
+    projects_dir.mkdir(exist_ok=True)
+    for card in PROJECTS:
+        (projects_dir / f"{card['file']}.svg").write_text(project_card(card), encoding="utf-8")
 
     contact_dir = ASSETS / "contact"
     contact_dir.mkdir(exist_ok=True)
@@ -295,7 +349,7 @@ def main() -> None:
         (tools_dir / f"{file_id}.svg").write_text(
             tile(label, fetch_icon(skill_id)), encoding="utf-8"
         )
-    print(f"wrote header, featured card and {len(TOOLS)} tool tiles")
+    print(f"wrote header, {len(PROJECTS)} project cards and {len(TOOLS)} tool tiles")
 
 
 if __name__ == "__main__":
